@@ -1,5 +1,7 @@
 # Airbnb Database Relationships
 
+![Airbnb Schema](./assets/schema.png)
+
 ## 1. User & Property
 
 - **Relationship**: One-to-Many
