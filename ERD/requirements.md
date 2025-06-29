@@ -1,6 +1,6 @@
 # Airbnb Database Relationships
 
-![Airbnb Schema](./assets/schema.png)
+![Airbnb Schema](/assets/Airbnb.png)
 
 ## 1. User & Property
 
