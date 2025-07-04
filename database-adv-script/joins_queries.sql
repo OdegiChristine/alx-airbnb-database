@@ -26,7 +26,9 @@ SELECT
 FROM
     properties p
 LEFT JOIN
-    reviews r ON p.property_id = r.property_id;
+    reviews r ON p.property_id = r.property_id
+ORDER BY
+    p.property_id;
 
 -- Full outer join: Get a complete view of all users and all bookings
 SELECT
