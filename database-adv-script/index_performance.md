@@ -20,7 +20,7 @@ SELECT * FROM bookings WHERE user_id = 'd553e871-c1bb-49e0-8e6c-b0d3ab3cc573' AN
 Without indexes, PostgreSQL may perform a sequential scan, which checks every row, and is slow for large tables.
 With proper indexing, it can do an index scan, which jumps directly to relevant rows, thus much faster.
 
-## Performance Obersvation: Before vs After Indexing
+## Performance Observation: Before vs After Indexing
 
 **Before Indexing**
 ![Before indexing](/assets/Before_indexing.png)
