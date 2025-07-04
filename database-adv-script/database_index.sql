@@ -12,3 +12,23 @@ CREATE INDEX idx_bookings_start_date ON bookings(start_date);
 CREATE INDEX idx_properties_host_id ON properties(host_id);
 CREATE INDEX idx_properties_location ON properties(location);
 CREATE INDEX idx_properties_price ON properties(pricepernight);
+
+-- Measure query performance using EXPLAIN ANALYZE before and after adding indexes
+
+EXPLAIN ANALYZE
+SELECT 
+    b.booking_id,
+    b.start_date,
+    b.status,
+    u.first_name,
+    u.email,
+    p.name AS property_name,
+    p.location
+FROM bookings b
+INNER JOIN users u ON b.user_id = u.user_id
+INNER JOIN properties p ON b.property_id = p.property_id
+WHERE 
+    b.status = 'confirmed'
+    AND b.start_date BETWEEN '2024-06-01' AND '2024-06-30'
+    AND u.email ILIKE 'alice@example.com%'
+    AND p.location = 'Nairobi';
