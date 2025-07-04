@@ -28,7 +28,7 @@ With proper indexing, it can do an index scan, which jumps directly to relevant 
 - Higher execution time.
 
 **After Indexing**
-![After indexing](/assets/Before_indexing.png)
+![After indexing](/assets/After_indexing.png)
 
 - PostgreSQL uses the index.
 - Fewer rows scanned, much lower cost.
