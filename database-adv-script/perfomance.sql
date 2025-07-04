@@ -20,4 +20,7 @@ SELECT
 FROM bookings b
 LEFT JOIN users u ON b.user_id = u.user_id
 LEFT JOIN properties p ON b.property_id = p.property_id
-LEFT JOIN payments pay ON b.booking_id = pay.booking_id;
+LEFT JOIN payments pay ON b.booking_id = pay.booking_id
+WHERE b.status = 'confirmed'
+AND b.start_date BETWEEN '2024-06-01' AND '2024-06-30'
+AND p.location = 'Nairobi';
